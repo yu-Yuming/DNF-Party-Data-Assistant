@@ -55,9 +55,6 @@ jobs:
               with:
                 name: GetDundam.exe
 
-            - name: List downloaded files
-              run: ls -R .
-
             - name: Create release
               uses: softprops/action-gh-release@v2
               with:

@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # 프로그램 정보
-version = 1.4
+version = "1.4.2"
 
 # 캐릭터 데이터 파일
 characterDataFileName = "characterData.csv"

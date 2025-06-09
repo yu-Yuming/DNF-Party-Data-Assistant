@@ -52,13 +52,14 @@ jobs:
             - name: Download EXE file
               uses: actions/download-artifact@v4
               with:
-                name: GetDundam.exe
+                name: GetDundam
+                path: dist/GetDundam.exe
 
             - name: Create release
               uses: softprops/action-gh-release@v2
               with:
                 tag_name: ${{ github.ref_name }}
                 files: |
-                    GetDundam.exe/GetDundam.exe
+                    GetDundam/GetDundam.exe
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -33,7 +33,7 @@ jobs:
 
             - name: Build EXE file
               run: |
-                pyinstaller --onefile GetDundam.py
+                pyinstaller --onefile --distpath ./dist GetDundam.py
             
             - name: Upload EXE file
               uses: actions/upload-artifact@v4

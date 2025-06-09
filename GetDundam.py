@@ -2,6 +2,7 @@ import csv
 from random import random
 import time
 from urllib import parse
+from dotenv import load_dotenv
 import requests
 import json
 import os
@@ -11,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # 프로그램 정보
-version = "1.4.8"
+version = "1.4.9"
 
 # 캐릭터 데이터 파일
 characterDataFileName = "characterData.csv"
@@ -39,7 +40,8 @@ with open(characterDataFileName, newline="") as csvfile:
 result = []
 
 # 네오플 API 에서 캐릭터 키 정보 취득
-API_KEY = os.environ.get("API_KEY")
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 driver = webdriver.Chrome()
 

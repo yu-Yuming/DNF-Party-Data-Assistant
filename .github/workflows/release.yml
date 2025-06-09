@@ -54,11 +54,14 @@ jobs:
               with:
                 name: GetDundam.exe
 
+            - name: List downloaded files
+              run: ls -R .
+
             - name: Create release
               uses: softprops/action-gh-release@v2
               with:
                 tag_name: ${{ github.ref_name }}
                 files: |
-                    GetDundam.exe/*.exe
+                    GetDundam.exe
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
